@@ -605,7 +605,7 @@ html.rot #app{position:fixed;top:0;left:0;transform-origin:0 0;transform:rotate(
   function drawImgBox(ctx, im, w, h) { ctx.drawImage(im, -w / 2, -h / 2, w, h); }
   // saját kép: középre igazítva (ox,oy eltolás), sx=-1 tükrözés
   // képarányt megtartó elemek: 'b' = alulra igazítva, 'c' = középre
-  KG.IMGFIT = { domino: 'c', pendulum: 'c', plunger: 'b', starter: 'b', trampoline: 'b', button_on: 'b', pipe_out: 'c', pipe_in: 'b', fan: 'c', hammer: 'c', alarm: 'b', radio: 'b', kettle: 'b', blender: 'b', bubbles: 'b', vacuum: 'b', toothbrush: 'c', flashlight: 'c', faucet: 'c', pistol: 'c', wateringcan: 'b', iron: 'b', hotair: 'b', rocket: 'b', frog: 'b', horse: 'b', glove: 'c', balloon: 'c', umbrella: 'b', mug: 'b', broom: 'b', pedalbin: 'b', pedalbin_open: 'b', key: 'c', bulb: 'b', bulb_on: 'b', match: 'b', magnifier: 'c', clap: 'b', clap_on: 'b', toggle: 'b', toggle_on: 'b', battery: 'b', candle: 'b', candle_on: 'b', lamp: 'b', lamp_on: 'b', hourglass: 'c', hourglass_glass: 'c', yoyo: 'c', skateboard: 'b', train: 'b', metronome_base: 'b', winch: 'b', scale_base: 'b', bucket: 'b', counterweight: 'b', crane: 'c', hanger: 'c', sandbag: 'b', spiral: 'b', aquarium: 'b', cooler: 'b', glass: 'b', sluice: 'b', andgate: 'c', counter: 'c', barrier: 'b', bellows: 'c', extension: 'b', float_b: 'c', peg: 'c', pillow: 'b', plane: 'c', sponge: 'b', windmill: 'b', metronome: 'c', solar: 'b', solar_on: 'b', lift: 'b', belt: 'c', gear_big: 'c', gear_small: 'c', belt_wheel: 'c', winch_drum: 'c', hourglass_glass: 'c', flashlight_on: 'c', pedalbin_open: 'b', toggle_on: 'b', clap_on: 'b', bulb_on: 'b', scale_base: 'b', metronome_base: 'b', card: 'c', roller: 'c', doorstop: 'b', curtain: 'c', pulley: 'c', tray: 'c', mirror: 'c', pan: 'c' };
+  KG.IMGFIT = { car: 'b', domino: 'c', pendulum: 'c', plunger: 'b', starter: 'b', trampoline: 'b', button_on: 'b', pipe_out: 'c', pipe_in: 'b', fan: 'c', hammer: 'c', alarm: 'b', radio: 'b', kettle: 'b', blender: 'b', bubbles: 'b', vacuum: 'b', toothbrush: 'c', flashlight: 'c', faucet: 'c', pistol: 'c', wateringcan: 'b', iron: 'b', hotair: 'b', rocket: 'b', frog: 'b', horse: 'b', glove: 'c', balloon: 'c', umbrella: 'b', mug: 'b', broom: 'b', pedalbin: 'b', pedalbin_open: 'b', key: 'c', bulb: 'b', bulb_on: 'b', match: 'b', magnifier: 'c', clap: 'b', clap_on: 'b', toggle: 'b', toggle_on: 'b', battery: 'b', candle: 'b', candle_on: 'b', lamp: 'b', lamp_on: 'b', hourglass: 'c', hourglass_glass: 'c', yoyo: 'c', skateboard: 'b', train: 'b', metronome_base: 'b', winch: 'b', scale_base: 'b', bucket: 'b', counterweight: 'b', crane: 'c', hanger: 'c', sandbag: 'b', spiral: 'b', aquarium: 'b', cooler: 'b', glass: 'b', sluice: 'b', andgate: 'c', counter: 'c', barrier: 'b', bellows: 'c', extension: 'b', float_b: 'c', peg: 'c', pillow: 'b', plane: 'c', sponge: 'b', windmill: 'b', metronome: 'c', solar: 'b', solar_on: 'b', lift: 'b', belt: 'c', gear_big: 'c', gear_small: 'c', belt_wheel: 'c', winch_drum: 'c', hourglass_glass: 'c', flashlight_on: 'c', pedalbin_open: 'b', toggle_on: 'b', clap_on: 'b', bulb_on: 'b', scale_base: 'b', metronome_base: 'b', card: 'c', roller: 'c', doorstop: 'b', curtain: 'c', pulley: 'c', tray: 'c', mirror: 'c', pan: 'c' };
   function ov(ctx, name, w, h, ox, oy, sx) {
     var im = img(name); if (!im) return false;
     ctx.save(); if (sx === -1) ctx.scale(-1, 1);
@@ -827,7 +827,7 @@ html.rot #app{position:fixed;top:0;left:0;transform-origin:0 0;transform:rotate(
       var b = inst.main, d = inst.dir;
       inBody(ctx, b, function () {
         ctx.scale(d, 1);
-        if (ov(ctx, 'car', 92, 48, -6, -9)) return;
+        if (ov(ctx, 'car', 92, 48, -6, -1)) return;
         shade(ctx, true);
         ctx.fillStyle = '#FF6B5E'; rr(ctx, -33, -15, 66, 22, 7); ctx.fill();
         ctx.fillStyle = '#FF8F84'; rr(ctx, -23, -30, 38, 18, 7); ctx.fill();
@@ -1281,20 +1281,23 @@ html.rot #app{position:fixed;top:0;left:0;transform-origin:0 0;transform:rotate(
       }
     },
     drawBack: function (ctx, inst) {
-      var it = inst.it, ym = Math.max(it.y, it.y2) + 0;
+      var it = inst.it, ym = Math.max(it.y, it.y2), oa = inst.oa || 0, dx = Math.cos(oa), dy = Math.sin(oa);
+      var ex = it.x2 - dx * 40, ey = it.y2 - dy * 40, dip = Math.max(70, Math.abs(it.x2 - it.x) * 0.18);
       ctx.save(); ctx.lineCap = 'round'; ctx.lineJoin = 'round';
-      var path = function () { ctx.beginPath(); ctx.moveTo(it.x, it.y); ctx.lineTo(it.x, it.y + 30); ctx.bezierCurveTo(it.x, ym + 60, it.x2, ym + 60, it.x2, it.y2 + 20); ctx.lineTo(it.x2, it.y2); };
-      ctx.strokeStyle = '#4FA36B'; ctx.lineWidth = 34; path(); ctx.stroke();
-      ctx.strokeStyle = '#7ED69A'; ctx.lineWidth = 24; path(); ctx.stroke();
+      var path = function () { ctx.beginPath(); ctx.moveTo(it.x, it.y + 8); ctx.lineTo(it.x, it.y + 24); ctx.bezierCurveTo(it.x, ym + dip, ex - dx * 140, Math.max(ey - dy * 140, ym + dip * 0.6), ex, ey); ctx.lineTo(it.x2 - dx * 10, it.y2 - dy * 10); };
+      ctx.strokeStyle = '#1B2A4A'; ctx.lineWidth = 46; path(); ctx.stroke();
+      ctx.strokeStyle = '#2E9E2A'; ctx.lineWidth = 40; path(); ctx.stroke();
+      ctx.strokeStyle = '#55C734'; ctx.lineWidth = 30; path(); ctx.stroke();
+      ctx.save(); ctx.translate(-7, -6); ctx.strokeStyle = 'rgba(190,245,120,0.75)'; ctx.lineWidth = 7; path(); ctx.stroke(); ctx.restore();
       ctx.restore();
     },
     draw: function (ctx, inst) {
       var it = inst.it;
       ctx.save(); ctx.translate(it.x, it.y);
-      if (!ov(ctx, 'pipe_in', 70, 44, 0, 2)) { shade(ctx, true); ctx.fillStyle = '#3E9A5E'; rr(ctx, -34, -16, 14, 36, 5); ctx.fill(); rr(ctx, 20, -16, 14, 36, 5); ctx.fill(); shade(ctx, false); ctx.fillStyle = 'rgba(30,60,40,0.5)'; ctx.fillRect(-20, 4, 40, 16); }
+      if (!ov(ctx, 'pipe_in', 58, 36, 0, 4)) { shade(ctx, true); ctx.fillStyle = '#3E9A5E'; rr(ctx, -34, -16, 14, 36, 5); ctx.fill(); rr(ctx, 20, -16, 14, 36, 5); ctx.fill(); shade(ctx, false); ctx.fillStyle = 'rgba(30,60,40,0.5)'; ctx.fillRect(-20, 4, 40, 16); }
       ctx.restore();
       ctx.save(); ctx.translate(it.x2, it.y2); ctx.rotate(inst.oa);
-      if (!ov(ctx, 'pipe_out', 36, 44)) { shade(ctx, true); ctx.fillStyle = '#3E9A5E'; rr(ctx, -14, -20, 30, 40, 8); ctx.fill(); shade(ctx, false); ctx.fillStyle = '#1E4A2E'; ctx.beginPath(); ctx.ellipse(14, 0, 5, 14, 0, 0, 7); ctx.fill(); }
+      if (!ov(ctx, 'pipe_out', 84, 60, -26, 0)) { shade(ctx, true); ctx.fillStyle = '#3E9A5E'; rr(ctx, -14, -20, 30, 40, 8); ctx.fill(); shade(ctx, false); ctx.fillStyle = '#1E4A2E'; ctx.beginPath(); ctx.ellipse(14, 0, 5, 14, 0, 0, 7); ctx.fill(); }
       ctx.restore();
     }
   };
@@ -2309,7 +2312,12 @@ html.rot #app{position:fixed;top:0;left:0;transform-origin:0 0;transform:rotate(
   };
   // Csőposta: a meglévő cső másik kinézettel
   GD.tube = Object.assign({}, GD.pipe, { name: nm('Csőposta', 'Rohrpost', 'Pneumatic tube'),
-    drawBack: function (ctx, inst) { var it = inst.it, ym = Math.min(it.y, it.y2) - 80; ctx.save(); ctx.lineCap = 'round'; var path = function () { ctx.beginPath(); ctx.moveTo(it.x, it.y); ctx.lineTo(it.x, it.y - 10); ctx.bezierCurveTo(it.x, ym, it.x2, ym, it.x2, it.y2 - 10); ctx.lineTo(it.x2, it.y2); }; ctx.strokeStyle = 'rgba(160,190,220,0.9)'; ctx.lineWidth = 34; path(); ctx.stroke(); ctx.strokeStyle = 'rgba(223,242,255,0.8)'; ctx.lineWidth = 24; path(); ctx.stroke(); ctx.restore(); } });
+    drawBack: function (ctx, inst) { var it = inst.it, ym = Math.min(it.y, it.y2) - 80; ctx.save(); ctx.lineCap = 'round'; ctx.lineJoin = 'round'; var path = function () { ctx.beginPath(); ctx.moveTo(it.x, it.y); ctx.lineTo(it.x, it.y - 10); ctx.bezierCurveTo(it.x, ym, it.x2, ym, it.x2, it.y2 - 10); ctx.lineTo(it.x2, it.y2); };
+      ctx.strokeStyle = '#1B2A4A'; ctx.lineWidth = 44; path(); ctx.stroke(); ctx.strokeStyle = '#BFE3FA'; ctx.lineWidth = 38; path(); ctx.stroke(); ctx.strokeStyle = '#E4F4FF'; ctx.lineWidth = 26; path(); ctx.stroke();
+      ctx.save(); ctx.translate(-7, -6); ctx.strokeStyle = 'rgba(255,255,255,0.9)'; ctx.lineWidth = 6; path(); ctx.stroke(); ctx.restore(); ctx.restore(); },
+    draw: function (ctx, inst) { var it = inst.it;
+      var collar = function (x, y, a) { ctx.save(); ctx.translate(x, y); ctx.rotate(a); ctx.fillStyle = '#1B2A4A'; rr(ctx, -27, -10, 54, 20, 8); ctx.fill(); var g = ctx.createLinearGradient(0, -8, 0, 8); g.addColorStop(0, '#9FD3F5'); g.addColorStop(1, '#4FA3E8'); ctx.fillStyle = g; rr(ctx, -24.5, -7.5, 49, 15, 6); ctx.fill(); ctx.fillStyle = 'rgba(255,255,255,0.7)'; rr(ctx, -20, -5, 16, 4, 2); ctx.fill(); ctx.restore(); };
+      collar(it.x, it.y - 4, 0); collar(it.x2, it.y2, (inst.oa || 0) + Math.PI / 2); } });
 })(typeof window !== 'undefined' ? window : globalThis);
 
 (function (G) { var KG = G.KG; KG.GADGETS.probe = { name: { hu: 'próba', de: 'Probe', en: 'probe' }, cat: 'hidden', size: [4, 4], build: function (w, it) { var b = w.add({ x: it.x, y: it.y, static: true, sensor: true, parts: [KG.box(2, 2)], kind: 'deco' }); return { bodies: [b], main: b }; }, signal: function (inst, game) { inst.hit = game.time; }, draw: function () {} }; })(typeof window !== 'undefined' ? window : globalThis);
@@ -2509,7 +2517,7 @@ html.rot #app{position:fixed;top:0;left:0;transform-origin:0 0;transform:rotate(
 (function (G) {
   var KG = G.KG, t = KG.t, GD = KG.GADGETS;
   var $ = function (id) { return document.getElementById(id); };
-  var NW = 10, PER = 20, TOTAL = 200, VERSION = '1.4.6';
+  var NW = 10, PER = 20, TOTAL = 200, VERSION = '1.4.7';
 
   /* ---------- mentés ---------- */
   var S;
