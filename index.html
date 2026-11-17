@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 <meta name="theme-color" content="#EAF4FF">
 <title>Ball Chain Reaction</title>
-<script>window.KG_IMGLIST = ['alarm', 'balloon', 'barrier', 'basket', 'battery', 'bell', 'bellows', 'belt', 'belt_wheel', 'bg_menu', 'bg_w1', 'bg_w10', 'bg_w2', 'bg_w3', 'bg_w4', 'bg_w5', 'bg_w6', 'bg_w7', 'bg_w8', 'bg_w9', 'blender', 'block', 'book', 'broom', 'bubbles', 'bucket', 'bulb', 'bulb_on', 'bumper', 'button', 'button_on', 'candle', 'candle_on', 'car', 'catapult', 'clap', 'clap_on', 'conveyor', 'counterweight', 'crane', 'curtain', 'domino', 'doorstop', 'drain', 'extension', 'fan', 'faucet', 'flashlight', 'flashlight_on', 'float', 'float_b', 'frog', 'funnel', 'gate', 'gear_big', 'gear_small', 'gears', 'glass', 'glove', 'hammer', 'hanger', 'horse', 'hourglass', 'hourglass_glass', 'key', 'lamp', 'lamp_on', 'lift', 'magnet', 'magnifier', 'metronome', 'metronome_base', 'mirror', 'mug', 'pan', 'pedalbin', 'pedalbin_open', 'peg', 'pendulum', 'pillow', 'pin', 'pipe_in', 'pipe_out', 'pivot', 'plane', 'plank150', 'plank270', 'plunger', 'pulley', 'radio', 'rocket', 'roller', 'sandbag', 'scale', 'scale_base', 'seesaw', 'shelf', 'skateboard', 'solar', 'solar_on', 'spiral', 'sponge', 'starter', 'tablefan', 'toaster', 'toggle', 'toggle_on', 'toothbrush', 'top', 'train', 'trampoline', 'trapdoor', 'tray', 'umbrella', 'vacuum', 'wall', 'wateringcan', 'waterwheel', 'wheel', 'winch', 'winch_drum', 'windmill', 'yoyo']; /* a web/img mappában lévő képek nevei kiterjesztés nélkül – új képnél ide is írd be */</script>
+<script>window.KG_IMGLIST = ['alarm', 'balloon', 'barrier', 'basket', 'battery', 'bell', 'bellows', 'belt', 'belt_wheel', 'bg_menu', 'bg_w1', 'bg_w10', 'bg_w2', 'bg_w3', 'bg_w4', 'bg_w5', 'bg_w6', 'bg_w7', 'bg_w8', 'bg_w9', 'blender', 'block', 'book', 'broom', 'bubbles', 'bucket', 'bulb', 'bulb_on', 'bumper', 'button', 'button_on', 'candle', 'candle_on', 'car', 'catapult', 'clap', 'clap_on', 'conveyor', 'counterweight', 'crane', 'curtain', 'domino', 'doorstop', 'drain', 'extension', 'fan', 'faucet', 'flashlight', 'flashlight_on', 'float', 'float_b', 'frog', 'funnel', 'gate', 'gear_big', 'gear_small', 'gears', 'glass', 'glove', 'hammer', 'hanger', 'horse', 'hourglass', 'hourglass_glass', 'key', 'lamp', 'lamp_on', 'lift', 'magnet', 'magnifier', 'metronome', 'metronome_base', 'mirror', 'mug', 'pan', 'pedalbin', 'pedalbin_open', 'peg', 'pendulum', 'pillow', 'pin', 'pipe_in', 'pipe_out', 'pivot', 'plane', 'plank150', 'plank270', 'plunger', 'portal_in', 'portal_out', 'portal_swirl', 'pulley', 'radio', 'rocket', 'roller', 'sandbag', 'scale', 'scale_base', 'seesaw', 'shelf', 'skateboard', 'solar', 'solar_on', 'spiral', 'sponge', 'starter', 'tablefan', 'toaster', 'toggle', 'toggle_on', 'toothbrush', 'top', 'train', 'trampoline', 'trapdoor', 'tray', 'umbrella', 'vacuum', 'wall', 'wateringcan', 'waterwheel', 'wheel', 'winch', 'winch_drum', 'windmill', 'yoyo']; /* a web/img mappában lévő képek nevei kiterjesztés nélkül – új képnél ide is írd be */</script>
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -605,7 +605,7 @@ html.rot #app{position:fixed;top:0;left:0;transform-origin:0 0;transform:rotate(
   function drawImgBox(ctx, im, w, h) { ctx.drawImage(im, -w / 2, -h / 2, w, h); }
   // saját kép: középre igazítva (ox,oy eltolás), sx=-1 tükrözés
   // képarányt megtartó elemek: 'b' = alulra igazítva, 'c' = középre
-  KG.IMGFIT = { car: 'b', domino: 'c', pendulum: 'c', plunger: 'b', starter: 'b', trampoline: 'b', button_on: 'b', pipe_out: 'c', pipe_in: 'b', fan: 'c', hammer: 'c', alarm: 'b', radio: 'b', kettle: 'b', blender: 'b', bubbles: 'b', vacuum: 'b', toothbrush: 'c', flashlight: 'c', faucet: 'c', pistol: 'c', wateringcan: 'b', iron: 'b', hotair: 'b', rocket: 'b', frog: 'b', horse: 'b', glove: 'c', balloon: 'c', umbrella: 'b', mug: 'b', broom: 'b', pedalbin: 'b', pedalbin_open: 'b', key: 'c', bulb: 'b', bulb_on: 'b', match: 'b', magnifier: 'c', clap: 'b', clap_on: 'b', toggle: 'b', toggle_on: 'b', battery: 'b', candle: 'b', candle_on: 'b', lamp: 'b', lamp_on: 'b', hourglass: 'c', hourglass_glass: 'c', yoyo: 'c', skateboard: 'b', train: 'b', metronome_base: 'b', winch: 'b', scale_base: 'b', bucket: 'b', counterweight: 'b', crane: 'c', hanger: 'c', sandbag: 'b', spiral: 'b', aquarium: 'b', cooler: 'b', glass: 'b', sluice: 'b', andgate: 'c', counter: 'c', barrier: 'b', bellows: 'c', extension: 'b', float_b: 'c', peg: 'c', pillow: 'b', plane: 'c', sponge: 'b', windmill: 'b', metronome: 'c', solar: 'b', solar_on: 'b', lift: 'b', belt: 'c', gear_big: 'c', gear_small: 'c', belt_wheel: 'c', winch_drum: 'c', hourglass_glass: 'c', flashlight_on: 'c', pedalbin_open: 'b', toggle_on: 'b', clap_on: 'b', bulb_on: 'b', scale_base: 'b', metronome_base: 'b', card: 'c', roller: 'c', doorstop: 'b', curtain: 'c', pulley: 'c', tray: 'c', mirror: 'c', pan: 'c' };
+  KG.IMGFIT = { portal_in: 'c', portal_out: 'c', portal_swirl: 'c', car: 'b', domino: 'c', pendulum: 'c', plunger: 'b', starter: 'b', trampoline: 'b', button_on: 'b', pipe_out: 'c', pipe_in: 'b', fan: 'c', hammer: 'c', alarm: 'b', radio: 'b', kettle: 'b', blender: 'b', bubbles: 'b', vacuum: 'b', toothbrush: 'c', flashlight: 'c', faucet: 'c', pistol: 'c', wateringcan: 'b', iron: 'b', hotair: 'b', rocket: 'b', frog: 'b', horse: 'b', glove: 'c', balloon: 'c', umbrella: 'b', mug: 'b', broom: 'b', pedalbin: 'b', pedalbin_open: 'b', key: 'c', bulb: 'b', bulb_on: 'b', match: 'b', magnifier: 'c', clap: 'b', clap_on: 'b', toggle: 'b', toggle_on: 'b', battery: 'b', candle: 'b', candle_on: 'b', lamp: 'b', lamp_on: 'b', hourglass: 'c', hourglass_glass: 'c', yoyo: 'c', skateboard: 'b', train: 'b', metronome_base: 'b', winch: 'b', scale_base: 'b', bucket: 'b', counterweight: 'b', crane: 'c', hanger: 'c', sandbag: 'b', spiral: 'b', aquarium: 'b', cooler: 'b', glass: 'b', sluice: 'b', andgate: 'c', counter: 'c', barrier: 'b', bellows: 'c', extension: 'b', float_b: 'c', peg: 'c', pillow: 'b', plane: 'c', sponge: 'b', windmill: 'b', metronome: 'c', solar: 'b', solar_on: 'b', lift: 'b', belt: 'c', gear_big: 'c', gear_small: 'c', belt_wheel: 'c', winch_drum: 'c', hourglass_glass: 'c', flashlight_on: 'c', pedalbin_open: 'b', toggle_on: 'b', clap_on: 'b', bulb_on: 'b', scale_base: 'b', metronome_base: 'b', card: 'c', roller: 'c', doorstop: 'b', curtain: 'c', pulley: 'c', tray: 'c', mirror: 'c', pan: 'c' };
   function ov(ctx, name, w, h, ox, oy, sx) {
     var im = img(name); if (!im) return false;
     ctx.save(); if (sx === -1) ctx.scale(-1, 1);
@@ -659,7 +659,7 @@ html.rot #app{position:fixed;top:0;left:0;transform-origin:0 0;transform:rotate(
       b.data.col = it.col || 'red'; b.data.ball = true;
       return { bodies: [b], main: b };
     },
-    draw: function (ctx, inst) { var b = inst.main; KG.drawBall(ctx, b.x, b.y, R, b.data.col, b.a); }
+    draw: function (ctx, inst) { var b = inst.main; if (b.hidden) return; KG.drawBall(ctx, b.x, b.y, R, b.data.col, b.a); }
   };
 
   function plankGadget(len, nameObj, col) {
@@ -1273,14 +1273,15 @@ html.rot #app{position:fixed;top:0;left:0;transform-origin:0 0;transform:rotate(
       return { bodies: [b, sens], main: b, sens: sens, q: [], x2: it.x2, y2: it.y2, oa: oa };
     },
     step: function (inst, game) {
-      for (var k in inst.sens.touching) { var o = inst.sens.touching[k]; if (o.data.ball && o.enabled && o.vy > -50) { o.enabled = false; inst.q.push({ b: o, t: game.time + 0.55 }); busy(inst, game, 0.7); game.sfx('click'); } }
+      for (var k in inst.sens.touching) { var o = inst.sens.touching[k]; if (o.data.ball && o.enabled && o.vy > -50) { o.enabled = false; o.hidden = true; inst.fin = game.time; inst.q.push({ b: o, t: game.time + 0.55 }); busy(inst, game, 0.7); game.sfx('click'); } }
       for (var i = inst.q.length - 1; i >= 0; i--) {
         var e = inst.q[i]; if (game.time < e.t) continue;
-        var o2 = e.b, sp = inst.it.pow || 420; o2.x = inst.x2 + Math.cos(inst.oa) * 26; o2.y = inst.y2 + Math.sin(inst.oa) * 26; o2.vx = Math.cos(inst.oa) * sp; o2.vy = Math.sin(inst.oa) * sp; o2.w = 0; o2.enabled = true; o2.touching = {};
+        var o2 = e.b, sp = inst.it.pow || 420; o2.x = inst.x2 + Math.cos(inst.oa) * 26; o2.y = inst.y2 + Math.sin(inst.oa) * 26; o2.vx = Math.cos(inst.oa) * sp; o2.vy = Math.sin(inst.oa) * sp; o2.w = 0; o2.enabled = true; o2.hidden = false; o2.touching = {}; inst.fout = game.time;
         inst.q.splice(i, 1);
       }
     },
     drawBack: function (ctx, inst) {
+      if (KG.IMG && KG.IMG.portal_in) return;
       var it = inst.it, ym = Math.max(it.y, it.y2), oa = inst.oa || 0, dx = Math.cos(oa), dy = Math.sin(oa);
       var ex = it.x2 - dx * 40, ey = it.y2 - dy * 40, dip = Math.max(70, Math.abs(it.x2 - it.x) * 0.18);
       ctx.save(); ctx.lineCap = 'round'; ctx.lineJoin = 'round';
@@ -1291,8 +1292,20 @@ html.rot #app{position:fixed;top:0;left:0;transform-origin:0 0;transform:rotate(
       ctx.save(); ctx.translate(-7, -6); ctx.strokeStyle = 'rgba(190,245,120,0.75)'; ctx.lineWidth = 7; path(); ctx.stroke(); ctx.restore();
       ctx.restore();
     },
-    draw: function (ctx, inst) {
+    draw: function (ctx, inst, v) {
       var it = inst.it;
+      if (KG.IMG && KG.IMG.portal_in) {
+        var t = (v && v.game && v.game.time != null) ? v.game.time : ((v && v.time) || 0);
+        var swirl = function (cx, cy, rx, ry, dir) { if (!KG.IMG.portal_swirl) return; ctx.save(); ctx.translate(cx, cy); ctx.scale(rx, ry); ctx.beginPath(); ctx.arc(0, 0, 1, 0, 7); ctx.clip(); ctx.rotate(t * 2.4 * dir); ctx.globalAlpha = 0.75; ov(ctx, 'portal_swirl', 2.3, 2.3); ctx.restore(); };
+        var flash = function (cx, cy, t0, r) { if (t0 == null) return; var k = (t - t0) / 0.45; if (k < 0 || k > 1) return; var g = ctx.createRadialGradient(cx, cy, 1, cx, cy, r * (0.6 + k)); g.addColorStop(0, 'rgba(255,255,255,' + (0.9 * (1 - k)) + ')'); g.addColorStop(0.4, 'rgba(180,120,255,' + (0.6 * (1 - k)) + ')'); g.addColorStop(1, 'rgba(120,200,255,0)'); ctx.fillStyle = g; ctx.beginPath(); ctx.arc(cx, cy, r * (0.6 + k), 0, 7); ctx.fill(); };
+        ctx.save(); ctx.translate(it.x, it.y);
+        ov(ctx, 'portal_in', 80, 45, 0, -1); swirl(0, 2.3, 30, 11.5, 1); flash(0, 2, inst.fin, 46);
+        ctx.restore();
+        ctx.save(); ctx.translate(it.x2, it.y2); ctx.rotate(inst.oa || 0);
+        ov(ctx, 'portal_out', 40, 74, 2.6, 0); swirl(0, 0, 7.5, 28, -1); flash(4, 0, inst.fout, 42);
+        ctx.restore();
+        return;
+      }
       ctx.save(); ctx.translate(it.x, it.y);
       if (!ov(ctx, 'pipe_in', 58, 36, 0, 4)) { shade(ctx, true); ctx.fillStyle = '#3E9A5E'; rr(ctx, -34, -16, 14, 36, 5); ctx.fill(); rr(ctx, 20, -16, 14, 36, 5); ctx.fill(); shade(ctx, false); ctx.fillStyle = 'rgba(30,60,40,0.5)'; ctx.fillRect(-20, 4, 40, 16); }
       ctx.restore();
@@ -2517,7 +2530,7 @@ html.rot #app{position:fixed;top:0;left:0;transform-origin:0 0;transform:rotate(
 (function (G) {
   var KG = G.KG, t = KG.t, GD = KG.GADGETS;
   var $ = function (id) { return document.getElementById(id); };
-  var NW = 10, PER = 20, TOTAL = 200, VERSION = '1.4.7';
+  var NW = 10, PER = 20, TOTAL = 200, VERSION = '1.4.8';
 
   /* ---------- mentés ---------- */
   var S;
@@ -3150,7 +3163,7 @@ html.rot #app{position:fixed;top:0;left:0;transform-origin:0 0;transform:rotate(
         o.getContext('2d').drawImage(im, -x0, -y0); return o;
       } catch (e) { return im; }
     }
-    var names = ['bg_w1', 'bg_menu', 'plank150', 'plank270', 'wall', 'trampoline', 'book', 'block', 'seesaw', 'pivot', 'catapult', 'car', 'button', 'button_on', 'gate', 'bell', 'basket', 'shelf', 'starter', 'trapdoor', 'sandbag', 'pendulum', 'fan', 'toaster', 'conveyor', 'plunger', 'bumper', 'funnel', 'pipe_in', 'pipe_out', 'magnet', 'lamp', 'lamp_on', 'pin', 'domino', 'wheel', 'hourglass', 'candle', 'candle_on', 'bg_w2', 'bg_w3', 'bg_w4', 'bg_w5', 'bg_w6', 'bg_w7', 'bg_w8', 'bg_w9', 'bg_w10', 'toggle_on', 'pedalbin_open', 'solar_on', 'clap_on', 'bulb_on', 'flashlight_on', 'iron_on', 'plate_on', 'weightsensor_on', 'scale_base', 'metronome_base', 'gear_big', 'gear_small', 'belt_wheel', 'winch_drum', 'float_b', 'card', 'hourglass_glass'].concat(Object.keys(KG.BALLS).map(function (k) { return 'ball_' + k; })).concat(Object.keys(GD).filter(function (k) { return ['ball', 'probe', 'panel', 'drop'].indexOf(k) < 0; })); if (G.KG_IMGLIST) names = G.KG_IMGLIST; var left = names.length, started = false;
+    var names = ['bg_w1', 'bg_menu', 'plank150', 'plank270', 'wall', 'trampoline', 'book', 'block', 'seesaw', 'pivot', 'catapult', 'car', 'button', 'button_on', 'gate', 'bell', 'basket', 'shelf', 'starter', 'trapdoor', 'sandbag', 'pendulum', 'fan', 'toaster', 'conveyor', 'plunger', 'bumper', 'funnel', 'pipe_in', 'pipe_out', 'magnet', 'lamp', 'lamp_on', 'pin', 'domino', 'wheel', 'hourglass', 'candle', 'candle_on', 'bg_w2', 'bg_w3', 'bg_w4', 'bg_w5', 'bg_w6', 'bg_w7', 'bg_w8', 'bg_w9', 'bg_w10', 'toggle_on', 'pedalbin_open', 'solar_on', 'clap_on', 'bulb_on', 'flashlight_on', 'iron_on', 'plate_on', 'weightsensor_on', 'scale_base', 'metronome_base', 'gear_big', 'gear_small', 'belt_wheel', 'winch_drum', 'float_b', 'card', 'hourglass_glass', 'portal_in', 'portal_out', 'portal_swirl'].concat(Object.keys(KG.BALLS).map(function (k) { return 'ball_' + k; })).concat(Object.keys(GD).filter(function (k) { return ['ball', 'probe', 'panel', 'drop'].indexOf(k) < 0; })); if (G.KG_IMGLIST) names = G.KG_IMGLIST; var left = names.length, started = false;
     if (!left) setTimeout(function () { go(); }, 0);
     function go() { if (started) return; started = true; if (KG.IMG.bg_menu) $('home').style.background = 'url(' + KG.IMG.bg_menu.src.split('/').pop().replace(/^/, 'img/') + ') center / cover no-repeat'; show('home'); }
     names.forEach(function (n) { var im = new Image(); im.onload = function () { KG.IMG[n] = n.indexOf('bg_') === 0 ? im : trimImg(im); if (--left === 0) go(); }; var jpg = n.indexOf('bg_') === 0; im.onerror = function () { if (jpg) { jpg = false; im.src = 'img/' + n + '.png'; return; } if (--left === 0) go(); }; im.src = 'img/' + n + (jpg ? '.jpg' : '.png'); });

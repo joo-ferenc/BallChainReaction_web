@@ -1,4 +1,4 @@
-# Ball Chain Reaction – 1.4.7
+# Ball Chain Reaction – 1.4.8
 
 Láncreakciós golyós fejtörő: a játékos eszközöket tesz le, és a lánc végén a golyó célba ér, megszólal a csengő vagy felkapcsol a lámpa.
 Készítő: Joó Ferenc
@@ -10,6 +10,10 @@ Készítő: Joó Ferenc
 - Rendszerek: lökés, súly, kötél/csiga, levegő, áram, fény (tükör, napelem), hang (tapskapcsoló), víz, hő, forgás (fogaskerék, csörlő)
 - Szabad építés: csak a már megszerzett eszközökkel
 - Nyelvek: magyar, német, angol
+
+## Újdonságok az 1.4.8-ban
+
+- **Teleport-portál a cső helyett:** a golyó a lila portálba esik, felvillan, és a kijárati portálból lő ki. A portálok közepén forog az örvény (`portal_in`, `portal_out`, `portal_swirl`). Ha a portálképek hiányoznak, a régi cső jelenik meg.
 
 ## Újdonságok az 1.4.7-ben
 
@@ -62,7 +66,7 @@ Projekt: `C:\AndroidAppok\BallChainReaction2`, csomagnév: `com.jooferenc.ballch
 | `AndroidManifest.xml` | `app/src/main/` |
 | `build.gradle.kts` (Module :app) | `app/` |
 
-Fordítás: Build → Clean Project, majd Run ▶. A verzió a Beállítások alján látszik: **Ball Chain Reaction 1.4.7**.
+Fordítás: Build → Clean Project, majd Run ▶. A verzió a Beállítások alján látszik: **Ball Chain Reaction 1.4.8**.
 
 Ha „Incompatible Gradle JVM version” hiba jön: a `gradle/wrapper/gradle-wrapper.properties` fájlban a Gradle-verzió legyen **9.6.0** (vagy újabb).
 
