@@ -1,4 +1,4 @@
-# Ball Chain Reaction – 1.4.8
+# Ball Chain Reaction – 1.4.9
 
 Láncreakciós golyós fejtörő: a játékos eszközöket tesz le, és a lánc végén a golyó célba ér, megszólal a csengő vagy felkapcsol a lámpa.
 Készítő: Joó Ferenc
@@ -10,6 +10,12 @@ Készítő: Joó Ferenc
 - Rendszerek: lökés, súly, kötél/csiga, levegő, áram, fény (tükör, napelem), hang (tapskapcsoló), víz, hő, forgás (fogaskerék, csörlő)
 - Szabad építés: csak a már megszerzett eszközökkel
 - Nyelvek: magyar, német, angol
+
+## Újdonságok az 1.4.9-ben
+
+- **+20 új kép** (összesen 146): váltó, kártyalap, időzített ajtó, ÉS-kapu, szelep, hőlégballon, hűtőtáska, színes kapu, számláló, súlyérzékelő és nyomólap (mindkettő be-/kikapcsolt állapottal), vasaló + forró vasaló, akvárium, vizipisztoly, teáskanna, jégkocka, gyufa.
+- A számláló a kép kijelzőjén mutatja a számokat, az ÉS-kapu a kép foglalataiban gyújtja fel a zöld lámpákat.
+- Javítva: a hűtőtáska fehér háttere átlátszó lett; a `cointer` fájlnév `counter`-re javítva.
 
 ## Újdonságok az 1.4.8-ban
 
@@ -66,7 +72,7 @@ Projekt: `C:\AndroidAppok\BallChainReaction2`, csomagnév: `com.jooferenc.ballch
 | `AndroidManifest.xml` | `app/src/main/` |
 | `build.gradle.kts` (Module :app) | `app/` |
 
-Fordítás: Build → Clean Project, majd Run ▶. A verzió a Beállítások alján látszik: **Ball Chain Reaction 1.4.8**.
+Fordítás: Build → Clean Project, majd Run ▶. A verzió a Beállítások alján látszik: **Ball Chain Reaction 1.4.9**.
 
 Ha „Incompatible Gradle JVM version” hiba jön: a `gradle/wrapper/gradle-wrapper.properties` fájlban a Gradle-verzió legyen **9.6.0** (vagy újabb).
 
