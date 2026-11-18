@@ -1,4 +1,4 @@
-# Ball Chain Reaction – 1.4.9
+# Ball Chain Reaction – 1.5.0
 
 Láncreakciós golyós fejtörő: a játékos eszközöket tesz le, és a lánc végén a golyó célba ér, megszólal a csengő vagy felkapcsol a lámpa.
 Készítő: Joó Ferenc
@@ -10,6 +10,11 @@ Készítő: Joó Ferenc
 - Rendszerek: lökés, súly, kötél/csiga, levegő, áram, fény (tükör, napelem), hang (tapskapcsoló), víz, hő, forgás (fogaskerék, csörlő)
 - Szabad építés: csak a már megszerzett eszközökkel
 - Nyelvek: magyar, német, angol
+
+## Újdonságok az 1.5.0-ban
+
+- **Új dominók és könyvek, 5-5 fajta** (`domino`, `domino_2`…`domino_5`, `book`, `book_2`…`book_5`): a pályán vegyesen jelennek meg. A dominó képe pontosan a fizikai méretre illeszkedik, alja a vonalon van.
+- **Indító:** a golyó most a fa lejtőn fekszik, nem lebeg felette (a kép a lejtő dőlésszögéhez igazítva).
 
 ## Újdonságok az 1.4.9-ben
 
@@ -72,7 +77,7 @@ Projekt: `C:\AndroidAppok\BallChainReaction2`, csomagnév: `com.jooferenc.ballch
 | `AndroidManifest.xml` | `app/src/main/` |
 | `build.gradle.kts` (Module :app) | `app/` |
 
-Fordítás: Build → Clean Project, majd Run ▶. A verzió a Beállítások alján látszik: **Ball Chain Reaction 1.4.9**.
+Fordítás: Build → Clean Project, majd Run ▶. A verzió a Beállítások alján látszik: **Ball Chain Reaction 1.5.0**.
 
 Ha „Incompatible Gradle JVM version” hiba jön: a `gradle/wrapper/gradle-wrapper.properties` fájlban a Gradle-verzió legyen **9.6.0** (vagy újabb).
 

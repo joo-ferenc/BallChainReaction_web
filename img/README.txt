@@ -1,1 +1,1 @@
-Ide tehetők a saját képek (PNG, háttér JPG is). A nevüket (kiterjesztés nélkül) írd be az index.html elején lévő KG_IMGLIST listába – a mostani 146 kép már benne van.
+Ide tehetők a saját képek (PNG, háttér JPG is). A nevüket (kiterjesztés nélkül) írd be az index.html elején lévő KG_IMGLIST listába – a mostani 154 kép már benne van.
